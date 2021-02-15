@@ -1,5 +1,5 @@
 // template string //alt+96``
-const numero = (num1, num2) => `la suma es: ${num1 + num2}`;
+/*const numero = (num1, num2) => `la suma es: ${num1 + num2}`;
 
 const result = numero(10, 30);
 console.log(result);
@@ -43,3 +43,13 @@ const { enlace } = Web.redesSociales.youtube;
 
 console.log(enlace);
 console.log(Web.redesSociales.youtube.nombre);
+*/
+//fetch
+
+fetch("https://pokeapi.co/api/v2/pokemon/")
+  .then((res) => res.json())
+  .then((data) => {
+    data.results.forEach((element) => {
+      console.log(element.name);
+    });
+  });
