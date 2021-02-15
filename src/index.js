@@ -60,7 +60,12 @@ const obtenerPoke = async () => {
   try {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
     const data = await res.json();
-    console.log(data.results);
+    //console.log(data.results);
+    //map() y filter()
+    const arrayNombres = data.results.map((poke) => poke.url);
+    const arrayNombre = data.results.filter((poke) => poke.name !== "perro");
+    console.log(arrayNombres);
+    console.log(arrayNombre);
   } catch (error) {
     console.log(error);
   }
