@@ -24,3 +24,22 @@ mascota.dueño = "martin";
 //destructuring objects para sacar variables a forma global
 const { edad, nombre } = mascota;
 console.log(edad);
+
+//objetos dentro de objetos y mas objetos
+const Web = {
+  nombre: "headshop",
+  links: {
+    enlace: "www.helmetshop.com"
+  },
+  redesSociales: {
+    youtube: {
+      enlace: "youtube.com/headshop",
+      nombre: "helmet yt"
+    }
+  }
+};
+//ver un objeto que esta dentro de otros
+const { enlace } = Web.redesSociales.youtube;
+
+console.log(enlace);
+console.log(Web.redesSociales.youtube.nombre);
