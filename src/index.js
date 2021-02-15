@@ -52,4 +52,17 @@ fetch("https://pokeapi.co/api/v2/pokemon/")
     data.results.forEach((element) => {
       console.log(element.name);
     });
-  });
+  })
+  .catch((error) => console.log(error));
+
+// async await
+const obtenerPoke = async () => {
+  try {
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
+    const data = await res.json();
+    console.log(data.results);
+  } catch (error) {
+    console.log(error);
+  }
+};
+obtenerPoke();
