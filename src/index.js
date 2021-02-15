@@ -1,10 +1,21 @@
-
 // template string //alt+96``
-const numero = (num1,num2) => `la suma es: ${num1+num2}`
+const numero = (num1, num2) => `la suma es: ${num1 + num2}`;
 
-const result = numero(10,30)
-console.log(result)
+const result = numero(10, 30);
+console.log(result);
 
-//objetos 
+//objetos
+const mascota = {
+  nombre: "Tom",
+  edad: 5,
+  vivo: true,
+  //podemos adicionar array
+  razas: ["angora", "persa"]
+};
 
-const 
+console.log(mascota);
+console.log(mascota.edad);
+
+//cambiar y adicionar elementos
+mascota.edad = 6;
+mascota.dueño = "martin";
