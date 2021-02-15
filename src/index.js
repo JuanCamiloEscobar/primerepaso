@@ -15,7 +15,12 @@ const mascota = {
 
 console.log(mascota);
 console.log(mascota.edad);
+console.log(mascota.razas);
 
 //cambiar y adicionar elementos
 mascota.edad = 6;
 mascota.dueño = "martin";
+
+//destructuring objects para sacar variables a forma global
+const { edad, nombre } = mascota;
+console.log(edad);
